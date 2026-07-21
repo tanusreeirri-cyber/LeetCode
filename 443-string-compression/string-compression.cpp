@@ -3,7 +3,8 @@ public:
     int compress(vector<char>& chars) {
         int n=chars.size();
         int idx=0;
-    for(int i=0;i<n;i++){
+        int i=0;
+    while(i<n){
         char ch=chars[i];
         int count=0;
         while(i<n && chars[i]==ch){
@@ -20,9 +21,8 @@ public:
                 chars[idx++]=dig;
             }
         }
-        i--;
      }
-     chars.resize(idx);
+     chars.resize(idx);//resizing to index size
      return idx;   
     }
 };
