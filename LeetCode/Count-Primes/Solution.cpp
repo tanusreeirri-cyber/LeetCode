@@ -6,9 +6,9 @@
 6        for(int i=2;i<n;i++){
 7            if(is_prime[i]){
 8                count++;
-9            }
-10            for(int j=i*2;j<n;j+=i){
-11                is_prime[j]=false;
+9            for(long long j=1LL*i*i;j<n;j+=i){
+10                is_prime[j]=false;
+11            }
 12            }
 13        }
 14        return count;
