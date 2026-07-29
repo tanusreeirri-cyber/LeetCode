@@ -5,7 +5,7 @@ public:
        int sum=0;
        for(int i=0;i<n;i++){
             sum+=mat[i][i];
-            if(i!=n-i-1){
+            if(i!=n-i-1){//checking for common element to ignore adding it to sum twice
                 sum+=mat[i][n-i-1];
             }
        }
