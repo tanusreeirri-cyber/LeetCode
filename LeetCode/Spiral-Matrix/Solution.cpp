@@ -19,14 +19,14 @@
 19            }
 20             //for bottom
 21            for(int i=endcol-1;i>=stcol;i--){
-22                if(strow==endrow){
+22                if(strow==endrow){//for odd no of matrix
 23                    break;
 24                }
 25                ans.push_back(matrix[endrow][i]);
 26            }
 27             //for left
 28            for(int i=endrow-1;i>=strow+1;i--){
-29                if(stcol==endcol){
+29                if(stcol==endcol){//for odd no of matrix,not to overlap cols
 30                    break;
 31                }
 32                ans.push_back(matrix[i][stcol]);
