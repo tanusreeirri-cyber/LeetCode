@@ -1,14 +1,27 @@
 class Solution {
-    boolean dp[]=new boolean[100001];
+
+    int[] dp = new int[100001];
+
+    // 0 = not calculated
+    // 1 = winning
+    // 2 = losing
+
     public boolean winnerSquareGame(int n) {
-        if(n==0)
+
+        if (n == 0)
             return false;
-        if(dp[n])
-            return dp[n];
-        for(int i=1;i*i<=n;i++){
-            if(winnerSquareGame(n-i*i)==false)
-                return dp[n]=true;
+
+        if (dp[n] != 0)
+            return dp[n] == 1;
+
+        for (int i = 1; i * i <= n; i++) {
+            if (!winnerSquareGame(n - i * i)) {
+                dp[n] = 1;
+                return true;
+            }
         }
-        return dp[n]=false;
+
+        dp[n] = 2;
+        return false;
     }
 }
