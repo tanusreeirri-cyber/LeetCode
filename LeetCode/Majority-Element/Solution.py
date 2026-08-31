@@ -8,7 +8,7 @@
 8            else:
 9                freq-=1
 10            if freq==0:
-11                ans=nums[i]
-12                freq=1
+11                freq=1
+12                ans=nums[i]
 13        return ans
 14        
