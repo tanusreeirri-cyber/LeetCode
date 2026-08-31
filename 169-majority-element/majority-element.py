@@ -1,13 +1,8 @@
 class Solution(object):
     def majorityElement(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
         freq=1
         ans=nums[0]
-        n=len(nums)
-        for i in range(n):
+        for i in range(len(nums)):
             if nums[i]==ans:
                 freq+=1
             else:
