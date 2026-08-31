@@ -14,6 +14,6 @@
 14                freq-=1
 15            if freq==0:
 16                ans=nums[i]
-17                freq+=1
+17                freq=1
 18        return ans
 19        
