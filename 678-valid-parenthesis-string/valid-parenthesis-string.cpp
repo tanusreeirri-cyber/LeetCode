@@ -12,7 +12,7 @@ public:
                 minOpen--;
                 maxOpen--;
             }
-            else { // '*'
+            else { 
                 minOpen--;
                 maxOpen++;  
             }
